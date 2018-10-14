@@ -5,12 +5,14 @@ def run_guessing_game
 end
 
 def get_input
-  puts "Input:"
+  puts "Guess a number: "
   user_input = gets.strip
   if user_input.numeric?
     @guess = user_input.to_i
   elsif user_input == "exit"
     exit_game
+  else
+    puts "Invalid input!"
   end
 end
 
