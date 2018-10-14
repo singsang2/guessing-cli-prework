@@ -6,8 +6,12 @@ end
 
 def get_input
   puts "Input:"
-  user_input = gets.strip.to_i
-  
+  user_input = gets.strip
+  if user_input.numeric?
+    @guess = user_input.to_i
+  elsif user_input == "exit"
+    exit_game
+  end
 end
 
 def get_random_number
@@ -24,6 +28,10 @@ end
 
 def lose
   puts "The computer guessed #{@number}."
+end
+
+def exit_game
+  puts "Goodbye!"
 end
 
 class String
