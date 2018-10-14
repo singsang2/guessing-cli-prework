@@ -1,6 +1,8 @@
 # Code your solution here!
 def run_guessing_game
-  
+  until !game_finished?
+    get_input
+    
   
 end
 
@@ -17,7 +19,7 @@ def get_input
 end
 
 def get_random_number
-  @number = rand
+  @number = rand(6)+1
 end
 
 def guessed_right?
