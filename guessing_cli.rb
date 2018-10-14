@@ -25,3 +25,9 @@ end
 def lose
   puts "The computer guessed #{@number}."
 end
+
+class String
+  def numeric?
+    Float(self) rescue false
+  end
+end
