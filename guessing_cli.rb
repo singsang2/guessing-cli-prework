@@ -5,7 +5,7 @@ def run_guessing_game
 end
 
 def get_input
-  puts "Guess a number: "
+  puts "Guess a number between 1 and 6."
   user_input = gets.strip
   if user_input.numeric?
     @guess = user_input.to_i
