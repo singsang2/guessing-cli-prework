@@ -8,9 +8,11 @@ def run_guessing_game
       @guess = user_input.to_i
     elsif user_input == "exit"
       exit_game
+      break
     else
       puts "Invalid input!"
     end
+    
     guessed_right?? win : lose
   end
 end
