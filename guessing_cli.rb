@@ -42,7 +42,7 @@ end
 
 def exit_game
   puts "Goodbye!"
-  @game = false
+  break
 end
 
 class String
