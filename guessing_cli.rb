@@ -2,8 +2,7 @@
 def run_guessing_game
   @game = true
   loop do
-    #get_random_number
-    @number = rand(6)+1
+    get_random_number
     user_input = get_input
     if user_input.numeric?
       @guess = user_input.to_i
@@ -23,9 +22,9 @@ def get_input
   user_input = gets.strip
 end
 
-# def get_random_number
-#   @number = rand(6)+1
-# end
+def get_random_number
+  @number = rand(6)+1
+end
 
 def guessed_right?
   @number == @guess
