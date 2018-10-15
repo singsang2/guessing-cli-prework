@@ -3,10 +3,10 @@ def run_guessing_game
   @game = true
   loop do
     #get_random_number
-    guess = rand(6)+1
+    @number = rand(6)+1
     user_input = get_input
     if user_input.numeric?
-      guess = user_input.to_i
+      @guess = user_input.to_i
     elsif user_input == "exit"
       exit_game
       break
