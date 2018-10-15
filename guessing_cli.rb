@@ -1,27 +1,23 @@
 # Code your solution here!
 def run_guessing_game
   @game = true
-  until !@game
+  loop do
     get_random_number
-    get_input
-    if guessed_right?
-      win
+    user_input = get_input
+    if user_input.numeric?
+      @guess = user_input.to_i
+    elsif user_input == "exit"
+      exit_game
     else
-      lose
+      puts "Invalid input!"
     end
+    guessed_right?? win : lose
   end
 end
 
 def get_input
   puts "Guess a number between 1 and 6."
   user_input = gets.strip
-  if user_input.numeric?
-    @guess = user_input.to_i
-  elsif user_input == "exit"
-    exit_game
-  else
-    puts "Invalid input!"
-  end
 end
 
 def get_random_number
