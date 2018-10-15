@@ -1,9 +1,15 @@
 # Code your solution here!
 def run_guessing_game
-  until !game_finished?
+  @game = true
+  until !@game
+    get_random_number
     get_input
-    
-  
+    if guessed_right?
+      win
+    else
+      lose
+    end
+  end
 end
 
 def get_input
@@ -36,6 +42,7 @@ end
 
 def exit_game
   puts "Goodbye!"
+  @game = false
 end
 
 class String
