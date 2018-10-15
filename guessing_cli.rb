@@ -3,7 +3,7 @@ def run_guessing_game
   @game = true
   loop do
     #get_random_number
-    @number = rand(6)+1
+    @number = rand(6)
     user_input = get_input
     if user_input.numeric?
       @guess = user_input.to_i
